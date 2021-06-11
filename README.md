@@ -9,6 +9,14 @@ Framework](https://github.com/deepmind/acme).
 
 * [Quickstart and Tutorial](https://github.com/deepmind/acme/tree/master/examples)
 
+## Troubles
+
+* [Reverb](https://github.com/deepmind/reverb) (a DB for RL) is only available for "linux like" OSes.
+
+    * This is interesting: a lot of the frameworks we may be building against
+      aren't necessarily cross-platform.  How to handle situations like this,
+      esp. if we imagine AgentOS as a cross-platform endeavor.
+
 ## Notes
 
 * I think we'd probably call the Acme agent a policy in our terminology
@@ -40,4 +48,5 @@ pip install dm-acme[envs]
 pip install tensorflow
 pip install tensorflow-probability
 pip install dm-sonnet
+pip install imageio PILLOW pyvirtualdisplay
 ```
