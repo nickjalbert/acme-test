@@ -6,4 +6,8 @@ set -eu
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 ROOT_DIR="$SCRIPT_DIR/.."
 
-docker build -t acme_test "$ROOT_DIR"
+docker build \
+    --build-arg HOST_HOME="$HOME" \
+    --build-arg CONTAINER_HOME="/home/$USER" \
+    -t acme_test \
+    "$ROOT_DIR"
