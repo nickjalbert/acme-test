@@ -8,6 +8,26 @@ Framework](https://github.com/deepmind/acme).
 * [R2D2 for discrete action control](https://github.com/deepmind/acme/tree/master/acme/agents/tf/r2d2)
 * [Quickstart and Tutorial](https://github.com/deepmind/acme/tree/master/examples)
 
+
+## Docker Workflow
+
+Requires Docker to be installed on your machine.
+
+```
+./docker/build # Build latest Dockerfile
+./docker/run   # Run a container from latest build
+./docker/exec  # Interactive bash prompt into latest container
+./docker/kill  # Kill running container
+```
+
+Once in an interactive bash prompt in your docker container, you should then be
+able to run the following in the `acme-test` folder:
+
+```
+python verify.py    # Confirms installation of packages succeeded
+python cartpole.py  # Learns Cartpole using Acme's R2D2 implementation
+```
+
 ## Troubles
 
 * [Reverb](https://github.com/deepmind/reverb) (a DB for RL) is only available
@@ -50,13 +70,4 @@ pip install tensorflow
 pip install tensorflow-probability
 pip install dm-sonnet
 pip install imageio PILLOW pyvirtualdisplay
-```
-
-## Docker notes
-
-```
-./docker/build # build latest Dockerfil
-./docker/run   # run a container from latest build
-./docker/exec  # interactive bash prompt into latest container
-./docker/kill  # kill running container
 ```
