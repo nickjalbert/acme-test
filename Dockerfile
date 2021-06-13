@@ -33,3 +33,6 @@ RUN pip install trfl
 RUN pip install imageio
 RUN pip install PILLOW
 RUN pip install pyvirtualdisplay
+RUN pip install launchpad
+RUN pip install flake8
+RUN pip install black
