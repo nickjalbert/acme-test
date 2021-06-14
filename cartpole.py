@@ -37,8 +37,9 @@ class BasicRNN(networks.RNNCore):
         self._net = snt.DeepRNN(
             [
                 snt.Flatten(),
-                snt.LSTM(50),
-                snt.nets.MLP([50, 50, action_spec.num_values]),
+                #snt.VanillaRNN(16),
+                #snt.VanillaRNN(16),
+                snt.nets.MLP([64, 64, action_spec.num_values]),
             ]
         )
 
@@ -59,13 +60,13 @@ env_loop_logger = loggers.TerminalLogger(label="env_loop", time_delta=10.0)
 agent = r2d2.R2D2(
     environment_spec=environment_spec,
     network=BasicRNN(environment_spec.actions),
-    burn_in_length=10,
-    trace_length=50,
+    burn_in_length=2,
+    trace_length=10,
     replay_period=40,
     logger=agent_logger,
-    target_update_period=10,
+    target_update_period=25,
     min_replay_size=50,
-    max_replay_size=250,
+    max_replay_size=500,
     checkpoint=False,
 )
 
