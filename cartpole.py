@@ -37,7 +37,7 @@ class BasicRNN(networks.RNNCore):
         self._net = snt.DeepRNN(
             [
                 snt.Flatten(),
-                snt.LSTM(20),
+                snt.LSTM(50),
                 snt.nets.MLP([50, 50, action_spec.num_values]),
             ]
         )
@@ -55,14 +55,17 @@ class BasicRNN(networks.RNNCore):
 agent_logger = loggers.TerminalLogger(label="agent", time_delta=10.0)
 env_loop_logger = loggers.TerminalLogger(label="env_loop", time_delta=10.0)
 
-# Create the D4PG agent.
+# Create the R2D2 agent.
 agent = r2d2.R2D2(
     environment_spec=environment_spec,
     network=BasicRNN(environment_spec.actions),
     burn_in_length=10,
     trace_length=50,
-    replay_period=61,
+    replay_period=40,
     logger=agent_logger,
+    target_update_period=10,
+    min_replay_size=50,
+    max_replay_size=250,
     checkpoint=False,
 )
 
