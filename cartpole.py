@@ -37,9 +37,10 @@ class BasicRNN(networks.RNNCore):
         self._net = snt.DeepRNN(
             [
                 snt.Flatten(),
-                #snt.VanillaRNN(16),
-                #snt.VanillaRNN(16),
-                snt.nets.MLP([64, 64, action_spec.num_values]),
+                snt.VanillaRNN(16),
+                snt.VanillaRNN(16),
+                snt.VanillaRNN(16),
+                snt.nets.MLP([16, 16, action_spec.num_values]),
             ]
         )
 

@@ -1,6 +1,106 @@
 
 ### Cartpole trains
 
+~hour using RNN
+
+
+$ python cartpole.py
+2021-06-17 18:10:59.915021: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-06-17 18:10:59.915294: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-06-17 18:11:08.733470: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-06-17 18:11:08.733626: W tensorflow/stream_executor/cuda/cuda_driver.cc:326] failed call to cuInit: UNKNOWN ERROR (303)
+2021-06-17 18:11:08.733760: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (098935fbb284): /proc/driver/nvidia/version does not exist
+[reverb/cc/platform/tfrecord_checkpointer.cc:150]  Initializing TFRecordCheckpointer in /tmp/tmp71t2nejw.
+[reverb/cc/platform/tfrecord_checkpointer.cc:378] Loading latest checkpoint from /tmp/tmp71t2nejw
+[reverb/cc/platform/default/server.cc:54] Started replay server on port 24559
+2021-06-17 18:11:11.434148: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2021-06-17 18:11:11.437268: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 2292540000 Hz
+2021-06-17 18:11:11.465294: W tensorflow/python/util/util.cc:348] Sets are not currently considered sequences, but this may change in the future, so consider avoiding using them.
+10.00 after 10 episodes
+10.60 after 120 episodes
+[reverb/cc/client.cc:162] Sampler and server are owned by the same process (118) so Table priority_table is accessed directly without gRPC.
+[reverb/cc/client.cc:162] Sampler and server are owned by the same process (118) so Table priority_table is accessed directly without gRPC.
+[reverb/cc/client.cc:162] Sampler and server are owned by the same process (118) so Table priority_table is accessed directly without gRPC.
+[reverb/cc/client.cc:162] Sampler and server are owned by the same process (118) so Table priority_table is accessed directly without gRPC.
+9.70 after 230 episodes
+9.40 after 340 episodes
+9.80 after 450 episodes
+9.70 after 560 episodes
+9.10 after 670 episodes
+9.70 after 780 episodes
+9.70 after 890 episodes
+9.20 after 1000 episodes
+9.50 after 1110 episodes
+9.50 after 1220 episodes
+9.20 after 1330 episodes
+9.10 after 1440 episodes
+9.40 after 1550 episodes
+9.40 after 1660 episodes
+9.50 after 1770 episodes
+9.60 after 1880 episodes
+9.80 after 1990 episodes
+9.50 after 2100 episodes
+9.30 after 2210 episodes
+9.40 after 2320 episodes
+9.40 after 2430 episodes
+9.50 after 2540 episodes
+9.20 after 2650 episodes
+9.10 after 2760 episodes
+9.50 after 2870 episodes
+9.60 after 2980 episodes
+9.40 after 3090 episodes
+9.60 after 3200 episodes
+9.50 after 3310 episodes
+9.30 after 3420 episodes
+9.00 after 3530 episodes
+9.80 after 3640 episodes
+9.50 after 3750 episodes
+12.10 after 3860 episodes
+14.70 after 3970 episodes
+9.00 after 4080 episodes
+9.90 after 4190 episodes
+9.30 after 4300 episodes
+9.60 after 4410 episodes
+11.60 after 4520 episodes
+13.00 after 4630 episodes
+15.70 after 4740 episodes
+13.80 after 4850 episodes
+16.10 after 4960 episodes
+15.10 after 5070 episodes
+17.40 after 5180 episodes
+18.50 after 5290 episodes
+22.70 after 5400 episodes
+24.50 after 5510 episodes
+24.20 after 5620 episodes
+27.00 after 5730 episodes
+28.00 after 5840 episodes
+34.50 after 5950 episodes
+26.40 after 6060 episodes
+31.20 after 6170 episodes
+40.00 after 6280 episodes
+43.70 after 6390 episodes
+49.30 after 6500 episodes
+50.40 after 6610 episodes
+70.10 after 6720 episodes
+153.80 after 6830 episodes
+500.00 after 6940 episodes
+387.50 after 7050 episodes
+20.10 after 7160 episodes
+14.10 after 7270 episodes
+16.60 after 7380 episodes
+14.20 after 7490 episodes
+12.80 after 7600 episodes
+14.10 after 7710 episodes
+53.80 after 7820 episodes
+111.50 after 7930 episodes
+22.80 after 8040 episodes
+21.30 after 8150 episodes
+28.80 after 8260 episodes
+24.40 after 8370 episodes
+25.30 after 8480 episodes
+
+### Cartpole trains
+
 * Took about 1hr and 20k episodes only using an MLP
 
 ```
